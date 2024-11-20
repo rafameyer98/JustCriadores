@@ -1,0 +1,53 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:JustCriadores"
+             x:Class="JustCriadores.MainPage"
+             BackgroundColor="White">
+
+    <StackLayout VerticalOptions="CenterAndExpand" 
+                 HorizontalOptions="CenterAndExpand" 
+                 Spacing="20">
+
+        <!-- Imagem do álbum -->
+        <Image x:Name="AlbumCoverImage" 
+               Source="album_placeholder.jpg" 
+               Aspect="AspectFill" 
+               HeightRequest="200" 
+               WidthRequest="200" 
+               HorizontalOptions="Center" />
+
+        <!-- Título da música -->
+        <Label x:Name="SongTitle" 
+               Text="Song Title" 
+               FontSize="24" 
+               HorizontalOptions="Center" />
+
+        <!-- Artista da música -->
+        <Label x:Name="SongArtist" 
+               Text="Artist Name" 
+               FontSize="18" 
+               HorizontalOptions="Center" />
+
+        <!-- Linha Horizontal -->
+        <BoxView HeightRequest="1" 
+                 BackgroundColor="Gray" 
+                 HorizontalOptions="Fill" 
+                 Margin="10" />
+
+        <!-- Botões de Ações -->
+        <StackLayout Orientation="Horizontal" 
+                     HorizontalOptions="Center" 
+                     Spacing="30">
+            <Button x:Name="DislikeButton"
+                    BackgroundColor="Red" 
+                    TextColor="White" 
+                    Text="Dislike"
+                    Clicked="DislikeButton_Clicked" />
+            <Button x:Name="LikeButton"
+                    BackgroundColor="Green" 
+                    TextColor="White" 
+                    Text="Like"
+                    Clicked="LikeButton_Clicked" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
